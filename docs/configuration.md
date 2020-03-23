@@ -5,11 +5,11 @@ nav_order: 2
 permalink: /docs/configuration
 ---
 # Account Configuration
-Twitter Standard API requires the developers to create a developer account and set up an Oauth 1.0 on your app before you can access the users' data. 
-In the following steps, we walk through how we can set up our account and integrate our app with Twitter Standard API, using Oauth 1.0.
+Twitter Standard API requires the developers to create a developer account on your app before you can access the users' data. 
+In the following steps, we walk through how we can set up our account and integrate our app with Twitter Standard API.
 ***
 ## Developer Dashboard
-A developer account will give you access to the developer dashboard which lets us set up apps and the developer environment. The dashboard is where we ask Twitter for permission to use their API and give them the information they need, about the app.
+A developer account will give you access to the developer dashboard which lets us set up apps and the developer environment. The dashboard is where we ask Twitter for permission to use their API and give them the information they need, about the app. By applying for a developer account, you will give be able to grant access to your account, from your app.
 ### Applying for a developer account
 Sign in with your Twitter account. If you don't have one, go to [Sign up for Twitter](https://twitter.com/i/flow/signup) to create an account.
 
@@ -37,7 +37,7 @@ Once done, you will be shown a message, to confirm that you applied for a Twitte
 
 ### Preparing your URL endpoints
 
-Twitter will require a set of URL's from you. Those URL's will tell Twitter where to expect the requests to come from, and where to send them back. If requests are sent from any other URL, twitter will not authorize your program, even if the currect API key and token are used.
+Twitter will require a set of URL's from you. Those URL's will tell Twitter where to expect the requests to come from. If requests are sent from any other URL, twitter will not authorize your program, even if the currect API key and token are used.
 >Twitter will not accept local URL's(i.e. localhost/ ) as the URL for app.
 
 Twitter will email you a link, to confirm your email, for the developer account. After following the link email to you, you will be taken to your developer dashboard, where you can set up new apps, get API keys and set up your end points.
@@ -86,14 +86,12 @@ Now if we run the server.js file we will see the message printed in the terminal
 ![App is shown in the browser](../assets/images/config11.png)
 > process.env.PORT is an enviroment variable that will be provided by Heorku, when we upload app. The `||` operator will indicate that if the enviroment variable does not exist( i.e. when running locally) the port will alternatively be 3000.
 
-## Adding a callback endpoint
-The user will be sent to Twitter, to login to their account. After being authentication, the user will be sent back to our callback, by Twitter. We will be expecting them  in our callback page. For now, though, we will just show them a message.
-Let's add the endpoint to our server.js
-
+## Adding a tweet endpoint
+This endpoint will help us directly post content to our Twitter account. We will set up this endpoint to practice using the post functionality of the API, as well.
 ```
 
-app.get('/returned' , (req,res) => {
-    res.send('Welcome back')
+app.get('/tweet' , (req,res) => {
+    res.send('Happy Tweetting')
 })
 
 ```
