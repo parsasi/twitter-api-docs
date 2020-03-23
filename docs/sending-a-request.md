@@ -10,6 +10,7 @@ Now that we have created and deployed our app, we will have to submit its URL to
 Go back to your dashboard at [developer.twitter.com](https://developer.twitter.com/), and Log-in if you need to.
 ### Going to apps page
 Under your name, click on the "Apps" option.
+
 ![Apps option in the menu](../assets/images/config18.png)
 ### Create an app
 Click on the button to create an app, on the top corner of your page.
@@ -26,6 +27,7 @@ Enter the URL for the root of your application. This will be the URL that Heorku
 
 
 ![Base URL](../assets/images/config20.png)
+
 
 ### Callback URL
 This endpoint is the endpoint that the Twitter will send the users to, when they have signed in. Since we are not implementing OAuth in our application, we won't need to implement this endpoint in our application.
@@ -48,11 +50,17 @@ Review the information in the confirmation page.
 ![conficonfirmation](../assets/images/config24.png)
 ### Getting your access token
 Click on "Keys and tokens" on the top menu bar.
+
 ![keys and token page](../assets/images/config25.png)
+
 You will be able to see your API Key and API Secret Key in this page. 
+
 ![View key and secret key](../assets/images/config26.png)
+
 Twitter will identify us from these keys, when we send any requests to the API.
 > Warning: Keep these information safe and do not share them with anyone.
+
+***
 
 ## Getting our Access Token
 By generating an access token and a token secret, you are permitting your app to access your account information. In other words, you will be using your own Twitter account as a test account, for your application.
@@ -60,7 +68,9 @@ By generating an access token and a token secret, you are permitting your app to
 ### Generating tokens
 Click on the "Generate button to generate your access token and token secret."
 ![Generate Access Token](../assets/images/config28.png)
-> Once generated, keep the API keys safe and do not share them with anyone.
+
+Once generated, keep the API keys safe and do not share them with anyone.
+
 ![Access Token and Token Secret](../assets/images/config29.png)
 
 ***
@@ -117,16 +127,26 @@ app.get('/', (req, res) =>  {
   
 })
 ~~~ 
+
 > Note that the shared API Keys and Tokens are invalide.
+
+***
+
 ## Deploying the app
 In order for our app the be recognized by Twitter, we will have to deploy the new code, to replace the old one.
 Add, commit and push your code to Heorku.
+### Push your code
+Push your code to Heorku's remote using the commands below.
 ~~~
 git add .
 git commit -m 'Favorite function is implemented'
 git push heroku master
 ~~~
-Open your app in browser:
+### Open your app in a browser
+Open your app in browser using its URL or run `heroku open`:
+
+
 ![Info showing in the browser](../assets/images/config30.png)
-And with that, you have implemented your first Twitter Standard API feature.
+
+And with that, you have successfully implemented your first Twitter Standard API feature.
 
