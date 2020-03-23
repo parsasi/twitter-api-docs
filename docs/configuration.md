@@ -7,9 +7,12 @@ permalink: /docs/configuration
 # Account Configuration
 Twitter Standard API requires the developers to create a developer account on your app before you can access the users' data. 
 In the following steps, we walk through how we can set up our account and integrate our app with Twitter Standard API.
+
 ***
+
 ## Developer Dashboard
 A developer account will give you access to the developer dashboard which lets us set up apps and the developer environment. The dashboard is where we ask Twitter for permission to use their API and give them the information they need, about the app. By applying for a developer account, you will give be able to grant access to your account, from your app.
+
 ### Applying for a developer account
 Sign in with your Twitter account. If you don't have one, go to [Sign up for Twitter](https://twitter.com/i/flow/signup) to create an account.
 
@@ -31,6 +34,7 @@ You will be asked to confirm your information. Makes sure they're correct and cl
 
 Lastly, you will be requiried   Terms of use.
 > note that you will be have to have confirmed your email address before you can compelete this step.
+{: .label .label-green }
 
 Once done, you will be shown a message, to confirm that you applied for a Twitter Developer Account.
 ![Confirmed](../assets/images/config6.png)
