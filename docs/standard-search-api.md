@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Standard Search API
+title: Search
 nav_order: 7
 permalink: /docs/standard-search-api
 ---

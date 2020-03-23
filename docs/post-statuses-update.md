@@ -1,6 +1,6 @@
 ---
 layout: default
-title: POST statuses/update
+title: Tweeting
 nav_order: 6
 permalink: /docs/post-status-update
 ---
