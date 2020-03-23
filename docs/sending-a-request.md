@@ -5,7 +5,7 @@ nav_order: 4
 permalink: /docs/sending-a-request
 ---
 # Setting our endpoints in developer dashboard
-Now that we created our `/` and `/returned` endpoints, we will have to submit those to Twitter, so that they know where to send the user off, once they have logged into their account.
+Now that we have created and deployed our app, we will have to submit its URL to Twitter. This will help Twitter, identify and authorize our app.
 ## Dashboard
 Go back to your dashboard at [developer.twitter.com](https://developer.twitter.com/), and Log-in if you need to.
 ### Going to apps page
@@ -28,7 +28,7 @@ Enter the URL for the root of your application. This will be the URL that Heorku
 ![Base URL](../assets/images/config20.png)
 
 ### Callback URL
-This is the endpoint, at which we will be expecting the user to be redirected to. In our app, this is our `/returned` endpoint.
+This endpoint is the endpoint that the Twitter will send the users to, when they have signed in. Since we are not implementing OAuth in our application, we won't need to implement this endpoint in our application.
 
 ![Returned URL](../assets/images/config21.png)
 
@@ -54,16 +54,79 @@ You will be able to see your API Key and API Secret Key in this page.
 Twitter will identify us from these keys, when we send any requests to the API.
 > Warning: Keep these information safe and do not share them with anyone.
 
+## Getting our Access Token
+By generating an access token and a token secret, you are permitting your app to access your account information. In other words, you will be using your own Twitter account as a test account, for your application.
+
+### Generating tokens
+Click on the "Generate button to generate your access token and token secret."
+![Generate Access Token](../assets/images/config28.png)
+> Once generated, keep the API keys safe and do not share them with anyone.
+![Access Token and Token Secret](../assets/images/config29.png)
+
 ***
+# Connecting our application
+Let's go back to our application, and actually implement some Twitter functionalities.
+## Working with Twitter's npm package
+We will use Twitter's npm package, to simplify the process of requesting and getting response to and from Twitter.
+### Installation
+To install the package, open your terminal in your project. Run:
+~~~
+npm install twitter
+~~~
+### Requireing in your application
+Go to your server.js file and require the package, on the top.
+~~~
+  var Twitter = require('twitter');
+~~~
+### Set up the API Keys and Tokens
+inside your `/` route, use this code to create an object of the Twitter class.
+~~~
+var client = new Twitter({
+    consumer_key: '[API key]',
+    consumer_secret: '[API secret]',
+    access_token_key: '[generated access token]]',
+    access_token_secret: '[generated token secret]'
+  });
+~~~
+After creating the object, you will be able to call a get method on it, to fetch information, from a intended endpoint, in Twitter's API.
+### Sending your first request
+We will call the `/favorites/list/` endpoint to get the favorite Tweets for your account.
+~~~
+ client.get('favorites/list', function(error, tweets, response) {
+    if(error) throw error;
+    res.json(tweets);
+  });
+~~~
+This code will send all of the favorite tweets, to the client, as a JSON array. 
 
-# Sending Setting up our OAuth 1.0
+At the end, my `/` route looks like this:
+~~~
+app.get('/', (req, res) =>  {
 
-## What is OAuth?
-OAuth is an standard for for authentication. The standard allows developers to provide user authentication, through API's. OAuth has many different workflows. The OAuth provider, in our case Twitter, will indicate the workflow that the developers will use. Though Twitter supplies developers with a set of workflows, the one that matches our intentions and needs is the 3-legged OAuth.
+  var client = new Twitter({
+    consumer_key: '3miSSIBb4l4xIyBTMFLwbWo0s',
+    consumer_secret: 'ZhznnauyH8DOg3uov3AdgQMRUGrQmAem2aBVfGV5VazlEafJTQ',
+    access_token_key: '904009473924018176-fisMiBozBSv2ZKIdblizmXuYwlcSVpC',
+    access_token_secret: '05h0Yv9om2KThGNdrwM0HTm4xGOtI6UskYlSq5N0tBT3X'
+  });
+  client.get('favorites/list', function(error, tweets, response) {
+    if(error) throw error;
+    res.send(tweets);
+    console.log(response);
+  });
+  
+})
+~~~ 
+> Note that the shared API Keys and Tokens are invalide.
+## Deploying the app
+In order for our app the be recognized by Twitter, we will have to deploy the new code, to replace the old one.
+Add, commit and push your code to Heorku.
+~~~
+git add .
+git commit -m 'Favorite function is implemented'
+git push heroku master
+~~~
+Open your app in browser:
+![Info showing in the browser](../assets/images/config30.png)
+And with that, you have implemented your first Twitter Standard API feature.
 
-### 3-legged OAuth
-With 3 legged OAuth, we will make several requests to Twitter's endpoints, in order to gain an access token that will authorize us to get the users' data from twitter. We will, first, redirect the user to a URL that Twitter's given us, along with our app's API Key and API Secret Key. This will tell twitter that the user is coming from our app, not any other source. As soon as the user logs in and authorizes our app to access their information, Twitter will send them back, with a code, that can be used to fetch an access token from Twitter. The recieved access token, will grant us access to the users' information, by sening requests, to certian end-points.
-***
-## Redirecting the user to Twitter
-It's time to get back to writing our application. This time, though, we will be completing our app, so that it can communicate with the API.
-    

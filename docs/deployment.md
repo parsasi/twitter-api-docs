@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Creating our Express app
+title: Deploying to Heroku
 nav_order: 3
-permalink: /docs/express-setup
+permalink: /docs/deployment
 ---
 
 # Deploying our app to Heorku
@@ -116,4 +116,3 @@ You can visit the app by running `heroku open`.
 ![Deployed](../assets/images/config17.png)
 
 Congrats! You have deployed your NodeJs application to Heorku. 
-It's time to go back to developer portal, to provide twitter with our endpoints.
