@@ -17,8 +17,8 @@ Once logged in, Heroku will take you to your apps page, where you can find the a
 
 ## Setting up Heroku CLI
 Heroku CLI will allow us to deploy our app, from our termianl. Using the CLI is a quick and effective way to continuously deploy your web apps.
-> Make sure you have Git installed, before you install Heroku CLI. {: .label .label-green }
-
+> Note: Make sure you have Git installed, before you install Heroku CLI.
+{: .label .label-green }
 
 ***
 ### Downloading the CLI
