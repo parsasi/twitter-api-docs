@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Sending our first request
+title: Connecting to the API
 nav_order: 4
 permalink: /docs/sending-a-request
 ---
-# Setting our endpoints in developer dashboard
+# Connecting our app to the API
 Now that we have created and deployed our app, we will have to submit its URL to Twitter. This will help Twitter, identify and authorize our app.
 ## Dashboard
 Go back to your dashboard at [developer.twitter.com](https://developer.twitter.com/), and Log-in if you need to.
