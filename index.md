@@ -7,7 +7,7 @@ permalink: /
 ---
 
 # Introduction
-Twitter is one of the most popular social medias, among different age groups. Twitter's culture allows users to communicate, exchange ideas and obsurve information from each other without any personal connection. This gives programmers many opportunities to use Twitter's userbase for different purposes. On that note, Twitter provides a very thorough API for developers, who want to take advantage of its platform. 
+Twitter is one of the most popular social media, among different age groups. Twitter's culture allows users to communicate, exchange ideas and obsurve information from each other without any personal connection. This gives programmers many opportunities to use Twitter's userbase for different purposes. On that note, Twitter provides a very thorough API for developers, who want to take advantage of its platform. 
 
 ## Outcome
 By the end of this guid you will be able to:
