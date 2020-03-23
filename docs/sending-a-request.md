@@ -34,7 +34,7 @@ This endpoint is the endpoint that the Twitter will send the users to, when they
 
 ![Returned URL](../assets/images/config21.png)
 
-> Note: Make sure you include the entire URL concatinated with the endpoint inside the field( i.e. `https://glacial-wildwood-37970.herokuapp.com/returned`)
+> Note: Make sure you include the entire URL concatinated with the endpoint inside the field( i.e. https://glacial-wildwood-37970.herokuapp.com/returned)
 {: .label .label-green }
 
 ### Further Description
@@ -82,17 +82,17 @@ Let's go back to our application, and actually implement some Twitter functional
 We will use Twitter's npm package, to simplify the process of requesting and getting response to and from Twitter.
 ### Installation
 To install the package, open your terminal in your project. Run:
-~~~
+~~~shell
 npm install twitter
 ~~~
 ### Requireing in your application
 Go to your server.js file and require the package, on the top.
-~~~
+~~~javascript
   var Twitter = require('twitter');
 ~~~
 ### Set up the API Keys and Tokens
 inside your `/` route, use this code to create an object of the Twitter class.
-~~~
+~~~javascript
 var client = new Twitter({
     consumer_key: '[API key]',
     consumer_secret: '[API secret]',
@@ -103,7 +103,7 @@ var client = new Twitter({
 After creating the object, you will be able to call a get method on it, to fetch information, from a intended endpoint, in Twitter's API.
 ### Sending your first request
 We will call the `/favorites/list/` endpoint to get the favorite Tweets for your account.
-~~~
+~~~javascript
  client.get('favorites/list', function(error, tweets, response) {
     if(error) throw error;
     res.json(tweets);
@@ -112,7 +112,7 @@ We will call the `/favorites/list/` endpoint to get the favorite Tweets for your
 This code will send all of the favorite tweets, to the client, as a JSON array. 
 
 At the end, my `/` route looks like this:
-~~~
+~~~javascript
 app.get('/', (req, res) =>  {
 
   var client = new Twitter({
@@ -128,9 +128,10 @@ app.get('/', (req, res) =>  {
   });
   
 })
-~~~ 
+~~~  
 
-> Note: The demonstrated API Keys and Tokens are invalide. {: .label .label-green }
+> Note: The demonstrated API Keys and Tokens are invalide.
+{: .label .label-green }
 
 ***
 
@@ -139,14 +140,13 @@ In order for our app the be recognized by Twitter, we will have to deploy the ne
 Add, commit and push your code to Heorku.
 ### Push your code
 Push your code to Heorku's remote using the commands below.
-~~~
+~~~shell
 git add .
 git commit -m 'Favorite function is implemented'
 git push heroku master
-~~~
+~~~ 
 ### Open your app in a browser
 Open your app in browser using its URL or run `heroku open`:
-
 
 ![Info showing in the browser](../assets/images/config30.png)
 

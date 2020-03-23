@@ -60,7 +60,7 @@ We will create a simple, boiler plate Node Js server, using ExpressJs. We will b
 Let's start with making a directory for our project and adding a server.js file.
 
 
-```
+```javascript
 mkdir TwitterAPI
 cd TwitterAPI
 ls
@@ -70,13 +70,15 @@ npm init -y
 ![Creating the boiler plate app](../assets/images/config9.png)
 
 Then, let's install Express from npm
-```
+
+```sh
 npm i express
 ```
+
 Once Express is installed, we can go to our server.js file and create our server.
 
 In our server.js file, we'll add our "/" endpoint.
-```
+```javascript
 const express = require('express')
 const app = express()
  
@@ -94,7 +96,7 @@ Now if we run the server.js file we will see the message printed in the terminal
 
 ## Adding a tweet endpoint
 This endpoint will help us directly post content to our Twitter account. We will set up this endpoint to practice using the post functionality of the API, as well.
-```
+```javascript
 
 app.get('/tweet' , (req,res) => {
     res.send('Happy Tweetting')
