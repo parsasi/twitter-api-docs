@@ -100,7 +100,7 @@ var client = new Twitter({
     access_token_secret: '[generated token secret]'
   });
 ~~~
-After creating the object, you will be able to call a get method on it, to fetch information, from a intended endpoint, in Twitter's API.
+After creating the object, you will be able to call a get method on it, to fetch information, from an intended endpoint, in Twitter's API.
 ### Sending your first request
 We will call the `/favorites/list/` endpoint to get the favorite Tweets for your account.
 ~~~javascript
