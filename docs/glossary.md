@@ -9,9 +9,9 @@ permalink: /docs/glossary
 This sections is dedicated to explaining the terminalogy that might be unfamiliar to you.
 
 ## API Terminalogy
-Throughout the documentation, some terms are being using interchangably, regarding the API.
+Throughout the documentation, some terms are being used interchangably, regarding the API.
 
-**App Key** is the key with which Twitter recognizes our app.API Key, Consumer API Key, Consumer Key, Customer Key and OAuth Consumer Key will refer to the same consept.
+**App Key** is the key with which Twitter recognizes our app.API Key, Consumer API Key, Consumer Key, Customer Key and OAuth Consumer Key will refer to the same concept.
 
 **App Key Secret** is the "password" for our app, in order to connect with the API. App Key Secret is often refered to as API Secret Key, Consumer Secret, Consumer Key, Customer Key or OAuth Consumer Key.
 
@@ -25,7 +25,7 @@ Throughout the documentation, some terms are being using interchangably, regardi
 ## OAuth
 
 
-**OAuth** is an standard for for authentication. OAuth standard allows developers to provide user authentication, through API's. It has many different workflows. The OAuth provider will indicate the workflow that the developers will use.
+**OAuth** is an standard for authentication. OAuth standard allows developers to provide user authentication, through API's. It has many different workflows. The OAuth provider will indicate the workflow that the developers will use.
 
 **3-legged OAuth** is done by making several requests to the provider's endpoints. The requests are done sequentially to get a request token a OAuth Access Token and a User Access Token.
 
