@@ -12,7 +12,7 @@ This section will help resolve some of the issues you might run into, following 
 ### Error: Command 'npm' not found
 This error means that you do not have NPM installed. NPM gets installed, alongside NodeJs. To donwload NodeJs and NPM go to [nodejs.org](https://nodejs.org/)
 
-### Windows Protected Your PC
+### Error: Windows Protected Your PC
 When using the Heorku Windows installer, you might run into the following error:
 
 ![Windows Error](../assets/images/config31.jpg)
