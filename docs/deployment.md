@@ -49,7 +49,7 @@ Heroku will require us to change a few settings in your package.json file. First
 
 ### Setting up our app engin.
 Add the lines below, to the end of your package.json file, to tell Heroku what engin you want, running your Node application.
-~~~
+~~~json
 "engines": {
     "node": "10.x"
   },
@@ -58,12 +58,12 @@ This will help Heroku, recognize the version of the Node you are using.
 
 ### Setting your npm start command
 Inside your package.json, add this code to your scripts section:
-~~~
+~~~json
     "start": "node server.js"
 ~~~
 
 At the end, my package.json file is going to look like this:
-~~~
+~~~json
 {
   "name": "TwitterAPI",
   "version": "1.0.0",
@@ -105,17 +105,17 @@ After installing the CLI, run `heroku login`. This will open a browser windows, 
 
 ### Deploying
 Add, commit your code to Heroku:
-~~~
+~~~shell
 git add .
 git commit -m "Initial Commit"
 ~~~
 Then, run the command below, to create a remote for your Heroku:
-~~~
+~~~shell
 heroku create
 ~~~
 This will create a remote for your Heroku repository.
 Once created, you can push your code into your Heroku repository:
-~~~
+~~~shell
 git push heroku master
 ~~~
 You can visit the app by running `heroku open`.
