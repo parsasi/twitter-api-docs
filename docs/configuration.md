@@ -11,7 +11,7 @@ In the following steps, we walk through how we can set up our account and integr
 ***
 
 ## Developer Dashboard
-A developer account will give you access to the developer dashboard which lets us set up apps and the developer environment. The dashboard is where we ask Twitter for permission to use their API and give them the information they need, about the app. By applying for a developer account, you will give be able to grant access to your account, from your app.
+A developer account will give you access to the developer dashboard which lets us set up apps and the developer environment. The dashboard is where we ask Twitter for permission to use their API and give them the information they need, about the app. By applying for a developer account, you will be able to grant access to your account, from your app.
 
 ### Applying for a developer account
 Sign in with your Twitter account. If you don't have one, go to [Sign up for Twitter](https://twitter.com/i/flow/signup) to create an account.
@@ -28,7 +28,7 @@ Once you click on next, you will have to choose your country of residance and a 
 Next, you will be required to write about the app you will connect to the api. Based on the features you will use, you are required to write different paragraphs, mostly describing how you will use the feature.
 ![Describe what you will do with the API](../assets/images/config4.png)
 
-You will be asked to confirm your information. Makes sure they're correct and click on the "Looks Good" button.
+You will be asked to confirm your information. Make sure they're correct and click on the "Looks Good" button.
 
 ![Data Confirmation](../assets/images/config5.png)
 
@@ -48,7 +48,7 @@ Twitter will require a set of URL's from you. Those URL's will tell Twitter wher
 
 Twitter will email you a link, to confirm your email, for the developer account. After following the link email to you, you will be taken to your developer dashboard, where you can set up new apps, get API keys and set up your end points.
 
-Before we go any further, We will need to set up and deploy our app In order to have the URL's that twitter is expecting from us. We will make a simple Express app and we will deploy it to Heorku, to provide Twitter with the ened points it needs.
+Before we go any further, We will need to set up and deploy our app In order to have the URL's that twitter is expecting from us. We will make a simple Express app and we will deploy it to Heorku, to provide Twitter with the end points it needs.
 
 <!-- We will come back to the developer dashboard to set up our app and introduce our URL. -->
 So, let's go ahead and create our application.
