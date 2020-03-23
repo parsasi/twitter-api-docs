@@ -59,8 +59,10 @@ Throughout the document you will see warning and note messages, as your guid.
 
 ## Typography
 Instructions below will help you, when following the document.
-| **Typography** 		       	| **Description**										        |
+
+
+|**Typography**                      | **Description**										                |
 |:--|:-------|
-| "Quoted Text"	        | Buttons and links found on the tools we will be following 	        |
-|`in-line code`		    | Represent routes or one-line terminal commands in the application  	|
+|"Quoted Text"  	                 | Buttons and links found on the tools we will be following 	        |
+|`in-line code`	    	             | Represent routes or one-line terminal commands in the application  	|
 
