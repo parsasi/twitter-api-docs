@@ -33,7 +33,7 @@ You will be asked to confirm your information. Makes sure they're correct and cl
 ![Data Confirmation](../assets/images/config5.png)
 
 Lastly, you will be requiried   Terms of use.
-> note that you will be have to have confirmed your email address before you can compelete this step.
+> Note: you will be have to have confirmed your email address before you can compelete this step.
 {: .label .label-green }
 
 Once done, you will be shown a message, to confirm that you applied for a Twitter Developer Account.
@@ -42,7 +42,9 @@ Once done, you will be shown a message, to confirm that you applied for a Twitte
 ### Preparing your URL endpoints
 
 Twitter will require a set of URL's from you. Those URL's will tell Twitter where to expect the requests to come from. If requests are sent from any other URL, twitter will not authorize your program, even if the currect API key and token are used.
->Twitter will not accept local URL's(i.e. localhost/ ) as the URL for app.
+>Note: Twitter will not accept local URL's(i.e. localhost/ ) as the URL for app.
+{: .label .label-green }
+
 
 Twitter will email you a link, to confirm your email, for the developer account. After following the link email to you, you will be taken to your developer dashboard, where you can set up new apps, get API keys and set up your end points.
 

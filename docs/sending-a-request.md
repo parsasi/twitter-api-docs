@@ -34,7 +34,8 @@ This endpoint is the endpoint that the Twitter will send the users to, when they
 
 ![Returned URL](../assets/images/config21.png)
 
-> Make sure you include the entire URL concatinated with the endpoint inside the field( i.e. `https://glacial-wildwood-37970.herokuapp.com/returned`) {: .label .label-green }
+> Note: Make sure you include the entire URL concatinated with the endpoint inside the field( i.e. `https://glacial-wildwood-37970.herokuapp.com/returned`)
+{: .label .label-green }
 
 ### Further Description
 We will have to enter more description on how our app will be using the API. Write a more in depth explanation of how the app will work and what it aims to do.
@@ -58,7 +59,8 @@ You will be able to see your API Key and API Secret Key in this page.
 ![View key and secret key](../assets/images/config26.png)
 
 Twitter will identify us from these keys, when we send any requests to the API.
-> Keep these information safe and do not share them with anyone. {: .label .label-yellow }
+> Warning: Keep these information safe and do not share them with anyone.
+{: .label .label-yellow }
 
 ***
 
@@ -128,7 +130,7 @@ app.get('/', (req, res) =>  {
 })
 ~~~ 
 
-The demonstrated API Keys and Tokens are invalide. {: .label .label-green }
+> Note: The demonstrated API Keys and Tokens are invalide. {: .label .label-green }
 
 ***
 
