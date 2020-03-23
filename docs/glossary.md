@@ -17,9 +17,9 @@ Throughout the documentation, some terms are being using interchangably, regardi
 
 **Callback URL** is the URL that Twitter will use, to send the user back to, after authentication. Since we don't integerate OAuth 1.0 in our app, this will not be relevant to our app.
  
-**Access token** will tell Twitter which user we are trying to access. We will user the words Token and OAuth Token for the same concept.
+**Access Token** will tell Twitter which user we are trying to access. We will user the words Token and OAuth Token for the same concept.
 
-**Access token secret** will indicate wether or not our app should be able to access that specific users data. It will be called Token Secret or OAuth Token Secret.
+**Access Token Secret** will indicate wether or not our app should be able to access that specific users data. It will be called Token Secret or OAuth Token Secret, throughout the document.
 
 
 ## OAuth
