@@ -62,7 +62,7 @@ Twitter will identify us from these keys, when we send any requests to the API.
 > Warning: Keep these information safe and do not share them with anyone.
 {: .label .label-yellow }
 
-***
+*** 
 
 ## Getting our Access Token
 By generating an access token and a token secret, you are permitting your app to access your account information. In other words, you will be using your own Twitter account as a test account, for your application.
