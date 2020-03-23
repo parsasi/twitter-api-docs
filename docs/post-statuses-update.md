@@ -69,10 +69,11 @@ app.post('./statusUpdate',(req,res) => {
 
 |Name|Required|Description|Default Value|Example|
 |:---|:-------|:----------|:------------|:------|
-|status|required| The text of the status update.| | |
-|in_reply_to_status_id|optional|The ID od an existing status that the update is in reply to.|||
-|attachment_url|optional|In order for a URl to not be counted in the status body of an extended tweet, provide a URL as a Tweet attachment.|| `https://twitter.com/andypiper/status/903615884664725505`|
+|status|required| The text of the status update| | |
+|in_reply_to_status_id|optional|The ID od an existing status that the update is in reply to|||
+|attachment_url|optional|In order for a URl to not be counted in the status body of an extended tweet, provide a URL as a Tweet attachment|| `https://twitter.com/andypiper/status/903615884664725505`|
 |media_ids|optional|A comma delimited of media_ids to associate with the tweet ||`	471592 142565 957632`|
+
 ## Example Request
 
 You can use any REST tool such Postman and Insomnia for request to api. Sample Request look like this:
